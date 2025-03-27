@@ -1,3 +1,21 @@
-<form id="request" action="https://croxyproxy.com/servers" method="post">
-  <input id="url" value="https://nanodrop.io" name="url" type="text">
-<br>  <input type=submit>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Submit to CroxyProxy</title>
+</head>
+<body>
+    <form id="proxyForm" action="https://www.croxyproxy.com/" method="post">
+        <input type="hidden" name="url" value="https://nanodrop.io">
+        <input type="hidden" name="form" value="true">
+        <input type="hidden" name="action" value="servers">
+        <noscript>
+            <input type="submit" value="Continue to nanodrop.io via CroxyProxy">
+        </noscript>
+    </form>
+
+    <script>
+        document.getElementById('proxyForm').submit();
+    </script>
+</body>
+</html>
